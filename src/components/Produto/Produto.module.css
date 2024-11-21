@@ -1,0 +1,164 @@
+/* Corrige possíveis margens globais */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Remove qualquer scroll global */
+    box-sizing: border-box;
+}
+
+/* Página Principal */
+.pageContainer {
+    display: grid; /* Divisão em colunas */
+    grid-template-columns: 1fr 2fr; /* Coluna esquerda menor, direita maior */
+    min-height: 100vh; /* Altura mínima igual à da janela */
+    background: linear-gradient(to right, #f4f4f4, #d9e3f0); /* Gradiente de fundo */
+    padding: 20px; /* Espaçamento interno */
+    gap: 20px; /* Espaçamento entre colunas */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Garante que padding/margins não afetem as dimensões */
+}
+/* Adapta o layout para telas menores */
+@media (max-width: 768px) {
+    .pageContainer {
+        grid-template-columns: 1fr; /* Alinha as colunas verticalmente */
+        grid-template-rows: auto auto; /* As linhas ajustam-se automaticamente */
+        padding: 10px; /* Reduz o espaçamento em telas menores */
+    }
+
+    .leftColumn {
+        margin-bottom: 20px; /* Adiciona espaço entre as colunas */
+    }
+}
+
+/* Coluna Esquerda */
+.leftColumn {
+    display: flex; /* Layout flexível para centralizar os itens */
+    flex-direction: column; /* Itens organizados em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Texto centralizado */
+    padding: 20px;
+    background: white; /* Fundo branco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+    height: 100%; /* Garante que ocupa toda a altura disponível */
+    padding: 20px;
+    overflow: hidden; /* Evita que o conteúdo escape */
+}
+
+/* Para telas menores, ajuste o tamanho da coluna */
+@media (max-width: 768px) {
+    .leftColumn {
+        height: auto; /* Permite que o conteúdo defina a altura */
+    }
+}
+
+/* Título da coluna esquerda */
+.title {
+    font-size: 3rem; /* Tamanho grande */
+    color: #00bf63; /* Verde (cor padrão) */
+    margin-bottom: 20px;
+}
+
+/* Imagem (logotipo) */
+.logoImage {
+    width: 80%; /* Largura proporcional */
+    max-width: 500px; /* Largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Coluna Direita */
+.rightColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .rightColumn {
+        padding: 10px; /* Reduz o espaçamento */
+    }
+}
+
+/* Container dos Botões */
+.buttonsContainer {
+    display: grid; /* Grade para organizar os botões */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Botões se ajustam ao tamanho da tela */
+    gap: 20px; /* Espaço entre os botões */
+    width: 100%; /* Largura total */
+    max-width: 800px; /* Limita a largura máxima */
+}
+
+/* Botões */
+.button {
+    background-color: #00bf63; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 40px;
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    display: flex; /* Para centralizar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+}
+/* Ajusta os botões para telas menores */
+@media (max-width: 768px) {
+    .button {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+}
+
+.button:hover {
+    transform: scale(1.05); /* Botão aumenta ligeiramente */
+    background-color: #018d49; /* Fundo mais escuro */
+}
+.voltar {
+    background-color: #555; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px;
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    display: flex; /* Para centralizar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+}
+.voltar:hover {
+    transform: scale(1.05); /* Botão aumenta ligeiramente */
+    background-color: #2a2c2b; /* Fundo mais escuro */
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Fundo claro */
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ddd; /* Linha separadora */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Define uma altura específica para o rodapé */
+    box-sizing: border-box; /* Garante que padding/margins não alterem dimensões */
+}
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte */
+        padding: 5px 10px; /* Ajusta o espaçamento */
+    }
+}

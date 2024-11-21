@@ -1,0 +1,113 @@
+/* Container da página */
+.pageContainer {
+    display: grid; /* Layout em grade */
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    min-height: 100vh; /* Altura mínima */
+    background: linear-gradient(to right, #f4f4f4, #d9e3f0); /* Fundo gradiente */
+    padding: 20px;
+    gap: 20px; /* Espaçamento entre as colunas */
+}
+
+/* Coluna da esquerda */
+.leftColumn {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    background: white; /* Fundo branco */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Imagem do logotipo */
+.logoImage {
+    width: 70%; /* Largura proporcional */
+    max-width: 500px; /* Tamanho máximo */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+/* Título da coluna esquerda */
+.title {
+    font-size: 2.5rem; /* Tamanho do título */
+    color: #00bf63; /* Cor verde */
+    margin-bottom: 20px;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 1.2rem; /* Tamanho do texto */
+    color: #555; /* Texto cinza */
+    margin-bottom: 20px;
+}
+
+/* Coluna da direita */
+.rightColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white; /* Fundo branco */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Container dos Botões */
+.buttonsContainer {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    gap: 15px; /* Espaçamento entre os botões */
+    align-items: center; /* Centraliza os botões horizontalmente */
+}
+
+/* Botões */
+.button {
+    background-color: #00bf63; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 40px 60px; /* Aumenta o espaço interno */
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    width: 250px; /* Largura fixa */
+    text-align: center; /* Centraliza o texto */
+}
+
+.button:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+    background-color: #00964a; /* Tom mais escuro no hover */
+}
+.voltar {
+    background-color: #555; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 40px 60px; /* Aumenta o espaço interno */
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição suave */
+    width: 250px; /* Largura fixa */
+    text-align: center; /* Centraliza o texto */
+}
+.voltar:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+    background-color: #2a2c2b; /* Tom mais escuro no hover */
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Fundo claro */
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ddd; /* Linha separadora */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
