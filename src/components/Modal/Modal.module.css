@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Impede rolagem na página */
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    padding: 15px 20px; /* Espaçamento reduzido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ajuste da sombra */
+    text-align: center;
+    overflow: hidden; /* Impede rolagem dentro do modal */
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Reduzido o espaço */
+    color: #333;
+}
+
+.messageContent {
+    margin: 20px 0;
+    text-align: left; /* Para alinhar a tabela */
+    overflow-y: auto; /* Permite rolagem vertical */
+    max-height: 300px; /* Limita a altura máxima do conteúdo */
+    border: 1px solid #ddd; /* Adiciona uma borda para separar visualmente */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #333;
+}
+
+.input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+.actionButton {
+    background-color: #00bf63;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.actionButton:hover {
+    background-color: #009e53;
+}
+
+.saveButton,
+.cancelButton {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.saveButton {
+    background-color: #00bf63;
+    color: white;
+}
+
+.saveButton:hover {
+    background-color: #009e53;
+}
+
+.cancelButton {
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+.cancelButton:hover {
+    background-color: #b5b5b5;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; /* Elimina margens extras */
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px; /* Ajuste menor para espaçamento */
+    text-align: left;
+}
+
+
+.table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+.table td {
+    color: #555;
+    word-wrap: break-word; /* Ajusta o texto para quebrar dentro das células */
+}
+.footer {
+    margin-top: 10px; /* Espaçamento mínimo acima do botão */
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+}

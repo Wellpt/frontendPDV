@@ -1,0 +1,89 @@
+/* Estilização geral */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eaeaea; /* Fundo neutro */
+  }
+  
+  /* Formulário */
+  .loginForm {
+    background-color: #fff; /* Cor de fundo do formulário */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Título */
+  .loginTitle {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Aumenta o tamanho do título */
+    font-weight: 700; /* Negrito */
+    color: #00bf63; /* Verde padrão */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Leve sombra */
+  }
+  
+  /* Mensagem de erro */
+  .errorMessage {
+    color: red;
+    margin-bottom: 15px;
+  }
+  
+  /* Logo */
+  .logoImage {
+    width: 80%; /* Largura proporcional */
+    max-width: 300px; /* Tamanho máximo */
+    margin-bottom: 20px;
+  }
+  
+  /* Grupos de formulário */
+  .formGroup {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Labels */
+.formLabel {
+  font-size: 1rem; /* Aumenta o tamanho */
+  font-weight: 600; /* Negrito */
+  color: #018d49; /* Texto mais escuro */
+  margin-bottom: 5px; /* Espaço abaixo do label */
+  display: block; /* Torna o label em linha única */
+}
+  
+  /* Campos de entrada */
+  .formInput {
+    width: 94%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .formInput:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  /* Botão de login */
+  .loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bf63; /* Fundo verde */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .loginButton:hover {
+    background-color: #00964a; /* Tom mais escuro no hover */
+  }
+  
