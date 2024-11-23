@@ -6,7 +6,7 @@ interface ModalProps {
     onClose: () => void;
     title: string;
     inputs?: { name: string; placeholder: string; type: string }[]; // Campos de entrada opcionais
-    message?: string | { message: string; product: object } | object[]; // Mensagem ou mensagem + produto
+    message?: string | { message: string; product: object } | object | object[]; // Mensagem ou mensagem + produto
     onSubmit?: (data: any) => void; // Callback para salvar/buscar
 }
 
@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, 
     // Função para exibir uma tabela (para mensagens do tipo objeto/array)
     const renderTable = (data: object[] | object) => {
         if (!data || (Array.isArray(data) && data.length === 0)) {
-            return <p>Nenhum dado disponível para exibir.</p>;
+            return;
         }
 
         const arrayData = Array.isArray(data) ? data : [data];
@@ -102,9 +102,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, 
                     <div className={styles.messageContent}>
                         {typeof message === 'string' ? (
                             <p>{message}</p>
-                        ) : (
+                        ) : message !== undefined ? ( // Verificação para garantir que message não seja undefined
                             renderTable(message)
-                        )}
+                        ) : null}
                     </div>
                 )}
 

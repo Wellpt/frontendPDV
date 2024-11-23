@@ -139,6 +139,24 @@ body, html {
     transform: scale(1.05); /* Botão aumenta ligeiramente */
     background-color: #2a2c2b; /* Fundo mais escuro */
 }
+.delete {
+    background-color: #e42d2d; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px;
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    display: flex; /* Para centralizar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+}
+.delete:hover {
+    transform: scale(1.05); /* Botão aumenta ligeiramente */
+    background-color: #970f0f; /* Fundo mais escuro */
+}
 
 /* Rodapé */
 .footer {

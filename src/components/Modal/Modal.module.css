@@ -41,8 +41,6 @@
     text-align: left; /* Para alinhar a tabela */
     overflow-y: auto; /* Permite rolagem vertical */
     max-height: 300px; /* Limita a altura máxima do conteúdo */
-    border: 1px solid #ddd; /* Adiciona uma borda para separar visualmente */
-    padding: 10px; /* Adiciona espaçamento interno */
     border-radius: 8px; /* Deixa as bordas arredondadas */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
