@@ -1,0 +1,175 @@
+Define estilos globais
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.pageContainer {
+    display: flex;
+    flex-direction: row; /* Coloca as colunas lado a lado */
+    align-items: stretch; /* Faz com que ambas as colunas tenham a mesma altura */
+    background: linear-gradient(to right, #f4f4f4, #d9e3f0); /* Gradiente de fundo */
+    height: 100vh; /* Usa toda a altura da janela */
+}
+
+.leftColumn {
+    width: 30%; /* Define uma largura fixa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: #f9f9f9; /* Cor de fundo, opcional */
+    position: fixed; /* Torna a coluna fixa */
+    left: 0; /* Fixa à esquerda */
+    top: 0;
+    bottom: 0; /* Garante que ocupe toda a altura da tela */
+    z-index: 1; /* Garante que ela fique acima de outros elementos */
+}
+.title {
+    font-size: 3rem;
+    color: #00bf63;
+    margin-bottom: 20px;
+}
+
+.logoImage {
+    max-width: 80%; /* Garante que a imagem se ajuste ao espaço */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.rightColumn {
+    margin-left: 30%; /* Empurra o conteúdo da direita para não sobrepor a coluna fixa */
+    width: 70%; /* Garante que o restante do espaço seja usado pela coluna direita */
+    padding: 20px;
+    overflow-y: auto; /* Permite rolagem caso o conteúdo da direita seja muito longo */
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linhas, caso necessário */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    align-items: center; /* Centraliza os botões verticalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin: auto; /* Centraliza o bloco */
+    height: calc(100% - 50px); /* Garante que ocupe quase toda a altura disponível */
+}
+
+.button {
+    background-color: #00bf63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 40px 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: #018d49;
+}
+.voltar {
+    background-color: #555; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 40px;
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    display: flex; /* Para centralizar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+}
+.voltar:hover {
+    transform: scale(1.05);
+    background-color: #2a2c2b;
+}
+
+.delete {
+    background-color: #e42d2d; /* Fundo verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px;
+    font-size: 1.2rem; /* Texto maior */
+    cursor: pointer;
+    display: flex; /* Para centralizar ícones e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 8px; /* Espaço entre o texto e o ícone */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+}
+.delete:hover {
+    transform: scale(1.05); /* Botão aumenta ligeiramente */
+    background-color: #970f0f; /* Fundo mais escuro */
+}
+
+.list {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.pedido {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pedido:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.pedido h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.pedido p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.pedido ul {
+    padding-left: 20px;
+    margin: 10px 0 0;
+}
+
+.pedido ul li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #f8f8f8;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

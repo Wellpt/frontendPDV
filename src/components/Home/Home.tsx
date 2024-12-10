@@ -10,7 +10,7 @@ const Home = () => {
         navigate('/produto'); // Rota para Produtos
     };
     const paginaPedidos = () => {
-        navigate('/pedidos'); // Rota para Pedidos
+        navigate('/orders'); // Rota para Pedidos
     };
     const areaUsuario = () => {
         navigate('/usuarios'); // Rota para Área de Usuários
