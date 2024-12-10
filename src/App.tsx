@@ -4,6 +4,7 @@ import Login from "./components/Login/Login.tsx";
 import Produto from './components/Produto/Produto.tsx'
 import Home from './components/Home/Home.tsx'
 import PrivateRoute from "./PrivateRoute.tsx";
+import Pedidos from "./components/Pedidos/Pedidos.tsx";
 
 function App() {
     return (
@@ -16,6 +17,8 @@ function App() {
                 <Route path="/home" element={<PrivateRoute component={Home} />} />
 
                 <Route path="/produto" element={<PrivateRoute component={Produto} />} />
+
+                <Route path="/orders" element={<PrivateRoute component={Pedidos} />} />
                 
                 {/* Redirecionar para /login se a rota for / */}
                 <Route path="/" element={<Navigate to="/login" replace />} />

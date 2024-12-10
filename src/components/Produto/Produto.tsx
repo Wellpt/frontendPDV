@@ -28,7 +28,7 @@ const Produto = () => {
             // Conversão de valores de price e stock para números
             const formattedProduct = {
                 ...product,
-                price: parseFloat(product.price), // Converte price para Float
+                price: Number(product.price),
                 stock: parseInt(product.stock, 10), // Converte stock para Integer
             };
 

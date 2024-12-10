@@ -5,9 +5,10 @@ interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
     title: string;
-    inputs?: { name: string; placeholder: string; type: string }[]; // Campos de entrada opcionais
-    message?: string | { message: string; product: object } | object | object[]; // Mensagem ou mensagem + produto
     onSubmit?: (data: any) => void; // Callback para salvar/buscar
+    inputs?: { name: string; placeholder: string; type: string }[]; // Campos de entrada opcionais
+    children?: React.ReactNode;
+    message?: string | { message: string; product: object } | object | object[]; // Mensagem ou mensagem + produto
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, onSubmit }) => {
