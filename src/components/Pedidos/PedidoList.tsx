@@ -31,6 +31,7 @@ const PedidoList = ({ pedidos, onPedidosDeleted }: {pedidos: any[]; onPedidosDel
                 pedidos.orders.map((pedido, index) => (
                     <div key={pedido.id || index} className={styles.pedido}>
                         <p>ID: {pedido.id}</p>
+                            <h3>Itens:</h3>
                         <ul>
                             {pedido.items.map((item, idx) => (
                                 <li key={idx}>
@@ -41,8 +42,11 @@ const PedidoList = ({ pedidos, onPedidosDeleted }: {pedidos: any[]; onPedidosDel
                         <p>Valor Total do Pedido: {pedido.totalPrice || 0}</p>
                         <p>Data: {new Date(pedido.createdAt).toLocaleString()}</p>
                         <p>Status: {pedido.status}</p>
-                        <h3>Itens:</h3>
-                        <button className ={styles.delete} onClick={() => handleDeletePedido(pedido.id)}>Deletar</button>
+                        <div className='form-buttons-container'>
+                            <button className ={styles.delete} onClick={() => handleDeletePedido(pedido.id)}>Deletar</button>
+                            <button className ={styles.reabrir} onClick={() => handleDeletePedido(pedido.id)}>Reabrir</button>
+                            <button className ={styles.imprimir} onClick={() => handleDeletePedido(pedido.id)}>Imprimir</button>
+                        </div>
                     </div>
                 ))
             ) : (
