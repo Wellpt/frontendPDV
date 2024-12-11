@@ -32,15 +32,17 @@
 
 .productItem input {
     margin-right: 10px;
-    padding: 8px;
+    padding: 9px 1px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     flex: 1;
 }
 
 .removeButton {
-    background-color: #f44336;
-    color: #fff;
+    background-color: #ccc;
+    color: black;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 10px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -68,7 +70,7 @@
 
 .actions {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -82,8 +84,8 @@
 }
 
 .cancelButton {
-    background-color: #f44336;
-    color: #fff;
+    background-color: #ccc;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
