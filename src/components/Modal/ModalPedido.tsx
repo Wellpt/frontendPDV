@@ -4,18 +4,18 @@ import styles from './ModalPedido.module.css';
 interface ModalPedidoProps {
     isOpen: boolean;
     onClose: () => void;
-    onSubmit: (pedido: { products: { productName: string; quantity: number }[]; status: string }) => void;
+    onSubmit: (pedido: { products: { productId: number; quantity: number }[]; status: string }) => void;
 }
 
 const ModalPedido: React.FC<ModalPedidoProps> = ({ isOpen, onClose, onSubmit }) => {
-    const [pedidoProducts, setPedidoProducts] = useState<{ productName: string; quantity: string }[]>([
-        { productName: '', quantity: '' },
+    const [pedidoProducts, setPedidoProducts] = useState<{ productId: string; quantity: string }[]>([
+        { productId: '', quantity: '' },
     ]);
     const [status, setStatus] = useState('');
 
     // Adiciona um novo produto ao formulário
     const addProduct = () => {
-        setPedidoProducts([...pedidoProducts, { productName: '', quantity: '' }]);
+        setPedidoProducts([...pedidoProducts, { productId: '', quantity: '' }]);
     };
 
     // Remove um produto do formulário
@@ -24,7 +24,7 @@ const ModalPedido: React.FC<ModalPedidoProps> = ({ isOpen, onClose, onSubmit }) 
     };
 
     // Atualiza o valor de um campo específico em um produto
-    const handleProductChange = (index: number, field: 'productName' | 'quantity', value: string) => {
+    const handleProductChange = (index: number, field: 'productId' | 'quantity', value: string) => {
         const updatedProducts = [...pedidoProducts];
         updatedProducts[index][field] = value;
         setPedidoProducts(updatedProducts);
@@ -32,13 +32,13 @@ const ModalPedido: React.FC<ModalPedidoProps> = ({ isOpen, onClose, onSubmit }) 
 
     // Valida e submete os dados
     const handleSubmit = () => {
-        const formattedProducts = pedidoProducts.map(({ productName, quantity }) => ({
-            productName,
+        const formattedProducts = pedidoProducts.map(({ productId, quantity }) => ({
+            productId: parseInt(productId, 10), // Converte productId para número
             quantity: parseInt(quantity, 10), // Converte quantidade para número
         }));
 
         // Valida se todos os campos estão preenchidos
-        if (formattedProducts.some((p) => !p.productName || !p.quantity)) {
+        if (formattedProducts.some((p) => !p.productId || !p.quantity)) {
             alert('Preencha todos os campos corretamente antes de enviar.');
             return;
         }
@@ -63,10 +63,10 @@ const ModalPedido: React.FC<ModalPedidoProps> = ({ isOpen, onClose, onSubmit }) 
                     {pedidoProducts.map((product, index) => (
                         <div key={index} className={styles.productItem}>
                             <input
-                                type="text"
-                                placeholder="Nome do Produto"
-                                value={product.productName}
-                                onChange={(e) => handleProductChange(index, 'productName', e.target.value)}
+                                type="number"
+                                placeholder="ID do Produto"
+                                value={product.productId}
+                                onChange={(e) => handleProductChange(index, 'productId', e.target.value)}
                             />
                             <input
                                 type="number"

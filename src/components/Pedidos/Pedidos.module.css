@@ -117,22 +117,22 @@ body, html {
     background-color: #970f0f; /* Fundo mais escuro */
 }
 .reabrir {
-    background-color: #00bf63; /* Fundo verde */
-    color: white; /* Texto branco */
-    border: none; /* Sem borda */
-    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #00bf63; 
+    color: white;
+    border: none; 
+    border-radius: 8px; 
     padding: 10px 20px;
     margin: 5px;
-    font-size: 1.2rem; /* Texto maior */
+    font-size: 1.2rem; 
     cursor: pointer;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 8px; /* Espaço entre o texto e o ícone */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Efeitos ao passar o mouse */
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .reabrir:hover {
-    transform: scale(1.05); /* Botão aumenta ligeiramente */
-    background-color: #018d49; /* Fundo mais escuro */
+    transform: scale(1.05); 
+    background-color: #018d49; 
 }
 .imprimir {
     background-color: #00bf63; /* Fundo verde */
