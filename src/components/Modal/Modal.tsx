@@ -11,7 +11,7 @@ interface ModalProps {
     message?: string | { message: string; product: object } | object | object[]; // Mensagem ou mensagem + produto
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, onSubmit }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, onSubmit, children }) => {
     const [formData, setFormData] = useState<{ [key: string]: string }>({});
 
     // Atualiza os campos de entrada dinamicamente
@@ -93,6 +93,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, 
                     </form>
                 )}
 
+                {/* Renderiza conteúdo customizado */}
+                {children && <div className={styles.childrenContent}>{children}</div>}
+
                 {/* Renderiza mensagens, se fornecidas */}
                 {message && typeof message === 'object' && 'message' in message && 'product' in message ? (
                     <div className={styles.messageContent}>
@@ -110,13 +113,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, inputs, message, 
                 )}
 
                 {/* Botão "Fechar" no rodapé */}
-                {message && (
+                
                     <div className={styles.footer}>
                         <button className={styles.actionButton} onClick={onClose}>
                             Fechar
                         </button>
                     </div>
-                )}
             </div>
         </div>
     );
