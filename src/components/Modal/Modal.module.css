@@ -79,8 +79,8 @@
 }
 
 .actionButton {
-    background-color: #00bf63;
-    color: white;
+    background-color: #ccc;
+    color: black;
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -89,7 +89,8 @@
     transition: background-color 0.3s ease;
 }
 .actionButton:hover {
-    background-color: #009e53;
+    background-color: #333;
+    color: white;
 }
 
 .saveButton,
