@@ -30,64 +30,58 @@
     margin-bottom: 10px;
 }
 
-.productItem input {
-    margin-right: 10px;
-    padding: 9px 1px;
+.productItem input,
+.statusInput {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     flex: 1;
+    margin-right: 10px;
 }
 
-.removeButton {
-    background-color: #ccc;
-    color: black;
+button {
+    font-size: 16px;
     border: none;
-    padding: 10px 10px;
+    padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.addButton {
+button:hover {
+    transform: scale(1.05);
+}
+
+button.addButton,
+button.submitButton {
     background-color: #4caf50;
     color: #fff;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
+    padding: 10px 20px;
+}
+
+button.addButton:hover,
+button.submitButton:hover {
+    background-color: #018d49;
+}
+
+button.removeButton,
+button.cancelButton {
+    background-color: #ccc;
+    color: black;
+}
+
+button.removeButton:hover,
+button.cancelButton:hover {
+    background-color: #333;
+    color: white;
 }
 
 .statusContainer {
     margin: 20px 0;
 }
 
-.statusInput {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .actions {
     display: flex;
     justify-content: center;
     gap: 10px;
-}
-
-.submitButton {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.cancelButton {
-    background-color: #ccc;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
 }

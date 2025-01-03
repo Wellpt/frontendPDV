@@ -212,3 +212,93 @@ body, html {
     left: 0;
     width: 100%;
 }
+
+.scrollableModalContent {
+    max-height: 400px; /* Define a altura máxima para o conteúdo */
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+    padding-right: 10px; /* Espaço para evitar que o conteúdo encoste no scroll */
+    margin-top: 10px; /* Espaço para afastar do título do modal */
+}
+
+.radioGroup label {
+    display: flex;
+    align-items: center; /* Centraliza o marcador e o texto verticalmente */
+    gap: 8px; /* Define o espaçamento entre o marcador e o texto */
+    margin-bottom: 10px; /* Espaçamento entre as opções */
+}
+
+.fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    margin-bottom: 20px; 
+}
+
+.legend {
+    font-weight: bold; 
+    font-size: 1rem; 
+    color: #555; 
+    padding: 0 5px;
+}
+
+.noMarkers {
+    list-style: none; /* Remove os marcadores padrão */
+    padding-left: 0; /* Remove o recuo padrão */
+    margin: 0; /* Remove margens extras */
+}
+
+.pedidoItem {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em uma coluna */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 20px; /* Espaço abaixo do grupo */
+}
+
+.radioGroup label {
+    display: flex;
+    align-items: center; /* Alinha o marcador e o texto */
+    gap: 8px; /* Espaço entre o marcador e o texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+.radioGroup input[type="radio"] {
+    accent-color: #00bf63; /* Cor personalizada do marcador */
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os botões de rádio */
+    margin-bottom: 20px; /* Espaçamento entre grupos de rádio */
+}
+
+.formButtons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.submitButton {
+    background-color: #00bf63;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    transform: scale(1.05);
+    background-color: #018d49;
+}
